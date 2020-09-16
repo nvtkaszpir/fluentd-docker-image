@@ -23,6 +23,7 @@ RUN apt-get update \
  && gem install async-http -v 0.50.7 \
  && gem install ext_monitor -v 0.1.2 \
  && gem install fluentd -v 1.11.1 \
+ && gem install fluent-plugin-prometheus --version='~>1.6.1' \
  && gem install fluent-plugin-elasticsearch \
  && dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')" \
  && wget -O /usr/local/bin/tini "https://github.com/krallin/tini/releases/download/v$TINI_VERSION/tini-$dpkgArch" \
